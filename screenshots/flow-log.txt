@@ -1,0 +1,21 @@
+catalogue count initial -> Showing 10 of 10 tours
+empty state text -> No tour satisfies region = Cultural Pakistan, duration = 6+ days. Loosen one filter, or reset them all.
+empty state URL -> file:///home/hatch/workspace/portfolio-builds/travel-tour-booking-demo/tours.html?region=Cultural+Pakistan&band=long
+after reset count -> Showing 10 of 10 tours | URL -> file:///home/hatch/workspace/portfolio-builds/travel-tour-booking-demo/tours.html
+seats BEFORE booking -> 5 seats remaining
+itinerary totals line -> 5 days · 4 nights · Hunza Valley, Gilgit-Baltistan · group of up to 16 · Guided 
+FIRING whatsapp log -> [{"tour":"hunza-classic","tourTitle":"Hunza Valley Classic","date":"","at":"2026-11-22","channel":"whatsapp-demo"}]
+seats note -> Hunza Valley Classic · Sat 5 Dec 2026: 5 seats remaining on this departure (demo clock: Sunday 22 November 2026).
+email error CONTENT -> Enter a valid email address, for example name@example.com.
+phone error CONTENT -> Enter a Pakistani mobile number with 11 digits starting 03, for example 0321 1234567.
+email error after fix (must be empty) -> ""
+phone error after fix (must be empty) -> ""
+capacity at exactly 5 travellers (error must be empty) -> ""
+capacity at 6 travellers error CONTENT -> Only 5 seats remain on the Sat 5 Dec 2026 departure of Hunza Valley Classic — reduce travellers to 5 or fewer, or choose another departure date.
+quote before submit -> Your itemised total (demo)Adults: 2 × PKR 48,500PKR 97,000Children: 1 × PKR 29,100 (60% child fare)PKR 29,100Home / airport pickup (flat)PKR 4,500Total for 3 travellersPKR 130,600No payment is taken in this demo. Child f
+confirmation CONTENT -> Booking enquiry confirmed · DemoTR-DEMO-9118Hunza Valley Classic · departing Sat 5 Dec 2026 · 2 adult(s) + 1 child(ren) · lead traveller Fatima Khan.Adults: 2 × PKR 48,500PKR 97,000Children: 1 × PKR 29,100 (60% child fare)PKR 29,100Home / airport pickup (flat)PKR 4,500TotalPKR 130,600Demo confirmation only — no payment
+confirmation ref -> TR-DEMO-9118
+seats AFTER booking (expect 2) -> 2 seats remaining
+bookings after cancel -> TR-DEMO-9118 · CancelledHunza Valley ClassicDeparting Sat 5 Dec 2026 · 2 adult(s) + 1 child(ren) · Lead traveller Fatima Khan · Total PKR 130,600Cancelled — its
+seats AFTER cancel (restored, expect 5) -> 5 seats remaining
+FIRING bookings stored = [{"ref":"TR-DEMO-9118","tourId":"hunza-classic","tourTitle":"Hunza Valley Classic","date":"2026-12-05","dateLabel":"Sat 5 Dec 2026","adults":2,"children":1,"addons":["pickup"],"total":130600,"name":"Fatima Khan","email":"fatima@example.com","phone":"03211234567","notes":"","status":"cancelled","createdDemoDate":"2026-11-22"}]

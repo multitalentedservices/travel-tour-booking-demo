@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking Enquiry — Dastaan Journeys (Demo)</title>
+<meta name="description" content="DEMO booking enquiry: pick a tour and departure, count travellers, add extras, and get an itemised total with a demo booking reference. No payment is taken.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar"><strong>DEMO</strong> — This enquiry is stored only in your browser. No payment is taken and no real booking is made.</div>
+<header class="site"><div class="wrap site-in">
+  <a class="logo" href="index.html">Dastaan <em>Journeys</em><small>Expeditions at dusk · Demo</small></a>
+  <nav class="main" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="tours.html">Tours</a>
+    <a href="about.html">About &amp; Reviews</a>
+    <a href="bookings.html" data-nav-bookings>My Bookings</a>
+  </nav>
+</div></header>
+<main id="main"><div class="wrap" style="padding-top:32px;padding-bottom:52px;max-width:860px">
+  <p class="eyebrow">Booking enquiry · Demo</p>
+  <h1 style="font-size:clamp(32px,4.4vw,46px)">Book your seats</h1>
+  <p style="color:var(--muted);max-width:42em">Children travel at 60% of the adult fare (rounded to the nearest PKR 100 — the rule is printed, and the total below is computed line by line). A departure cannot be overbooked: if your group is larger than the seats remaining, the form will say exactly that.</p>
+
+  <form class="book" data-form novalidate>
+    <div class="frow">
+      <div><label class="flabel" for="b-tour">Tour</label>
+        <select id="b-tour" data-tour></select>
+        <p class="err" data-error-for="tour"></p></div>
+      <div><label class="flabel" for="b-date">Departure date</label>
+        <select id="b-date" data-date></select>
+        <p class="err" data-error-for="date"></p></div>
+    </div>
+    <p class="clock-note" data-seats-note aria-live="polite"></p>
+    <div class="frow">
+      <div><label class="flabel" for="b-adults">Adults</label>
+        <input type="number" id="b-adults" data-adults min="1" max="20" value="2" inputmode="numeric"></div>
+      <div><label class="flabel" for="b-children">Children (60% fare)</label>
+        <input type="number" id="b-children" data-children min="0" max="20" value="0" inputmode="numeric"></div>
+    </div>
+    <p class="err" data-error-for="capacity"></p>
+    <fieldset style="border:0;padding:0;margin:0">
+      <legend class="flabel">Optional add-ons</legend>
+      <div style="display:grid;gap:10px" data-addons></div>
+    </fieldset>
+    <div class="frow">
+      <div><label class="flabel" for="b-name">Lead traveller name</label>
+        <input type="text" id="b-name" data-name autocomplete="name" placeholder="Full name">
+        <p class="err" data-error-for="name"></p></div>
+      <div><label class="flabel" for="b-phone">Mobile (Pakistani)</label>
+        <input type="tel" id="b-phone" data-phone autocomplete="tel" placeholder="0321 1234567">
+        <p class="err" data-error-for="phone"></p></div>
+    </div>
+    <div><label class="flabel" for="b-email">Email</label>
+      <input type="email" id="b-email" data-email autocomplete="email" placeholder="name@example.com">
+      <p class="err" data-error-for="email"></p></div>
+    <div><label class="flabel" for="b-notes">Notes for the crew (optional)</label>
+      <textarea id="b-notes" data-notes placeholder="Pickup city, dietary needs, anything we should know"></textarea></div>
+
+    <div class="quote" data-quote aria-live="polite"></div>
+    <p style="display:flex;gap:12px;flex-wrap:wrap;margin:0">
+      <button class="btn" type="submit">Confirm booking enquiry (demo)</button>
+      <button class="btn wa" type="button" data-wa>Ask on WhatsApp instead (demo)</button>
+    </p>
+    <p class="demo-note">Demo only: the enquiry is saved to this browser's local storage and appears under My Bookings. No payment is taken, no email is sent.</p>
+  </form>
+  <div data-confirmation hidden></div>
+</div></main>
+<footer class="site"><div class="wrap cols">
+  <div><p style="font-family:var(--serif);font-size:22px;margin:0 0 8px">Dastaan Journeys</p>
+  <p style="margin:0">A fictional tour operator. Demo build for the MTS portfolio (client-facing owner: BalanceBit Solutions).</p></div>
+  <div><p style="font-weight:700;margin:0 0 8px">Explore</p>
+  <p style="margin:0"><a href="tours.html">All tours</a><br><a href="bookings.html">My Bookings</a><br><a href="about.html">About &amp; Reviews</a></p></div>
+  <div><p style="font-weight:700;margin:0 0 8px">Demo contact</p>
+  <p style="margin:0">WhatsApp (demo): +92 300 1234567</p></div>
+</div></footer>
+<script src="js/logic.js"></script>
+<script src="js/site.js"></script>
+<script src="js/book.js"></script>
+</body>
+</html>

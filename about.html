@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About &amp; Reviews — Dastaan Journeys (Demo)</title>
+<meta name="description" content="DEMO: the fictional story of Dastaan Journeys, why travellers (in this fiction) choose it, and clearly labelled fictional demo reviews.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar"><strong>DEMO</strong> — Dastaan Journeys is fictional. Every review on this page is fictional demo content and is labelled as such.</div>
+<header class="site"><div class="wrap site-in">
+  <a class="logo" href="index.html">Dastaan <em>Journeys</em><small>Expeditions at dusk · Demo</small></a>
+  <nav class="main" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="tours.html">Tours</a>
+    <a href="about.html" aria-current="page">About &amp; Reviews</a>
+    <a href="bookings.html" data-nav-bookings>My Bookings</a>
+  </nav>
+</div></header>
+<main id="main">
+  <section class="band" style="padding-top:36px"><div class="wrap cols">
+    <div>
+      <p class="eyebrow">Our story · Fiction, labelled</p>
+      <h1 style="font-size:clamp(34px,4.6vw,50px)">A dastaan is a story told at dusk. We plan trips the same way.</h1>
+      <p style="color:var(--muted);font-size:18px">Dastaan Journeys is a fictional operator invented for this portfolio demo — but it is written the way a credible northern-Pakistan operator actually works: departures from Islamabad, licensed local guides, capped group sizes, prices printed per person in rupees, and itineraries that say plainly what is included and what is not.</p>
+      <p style="color:var(--muted)">The pattern follows real operators researched for this build: one page per tour with a day-by-day itinerary, inclusions and exclusions side by side, and a booking path that never hides the price.</p>
+    </div>
+    <img src="assets/guide.jpg" alt="Travellers and a guide above a northern valley at dusk — demo photograph" style="border-radius:14px;width:100%;height:100%;object-fit:cover;min-height:280px">
+  </div></section>
+
+  <section class="band sand"><div class="wrap">
+    <p class="eyebrow">Why us</p>
+    <h2>Four promises, printed where you can check them</h2>
+    <div class="grid">
+      <article class="review"><h3>Seats you can count</h3><p>Every departure shows its remaining seats, and the number moves when bookings are made or cancelled — try it: book a seat, then check the tour page again.</p></article>
+      <article class="review"><h3>Prices with the working shown</h3><p>Adults at the printed fare, children at a stated 60%, add-ons priced flat or per traveller — the enquiry page itemises every line before you confirm.</p></article>
+      <article class="review"><h3>No invented proof</h3><p>Every review here is fictional and says so. A demo that fakes testimonials teaches the wrong lesson; this one labels its fiction instead.</p></article>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <p class="eyebrow">Demo reviews</p>
+    <h2>What our fictional travellers said</h2>
+    <p class="demo-note" style="margin-bottom:18px">All reviews below are fictional demo content, written for this portfolio build. No real traveller is quoted.</p>
+    <div class="grid" data-reviews></div>
+
+    <div class="panel" style="margin-top:28px;max-width:720px">
+      <h3 style="margin-top:0">Write a demo review</h3>
+      <p class="demo-note">Stored only in this browser and labelled as demo content, like everything else here.</p>
+      <form data-review-form novalidate style="display:grid;gap:12px">
+        <div><label class="flabel" for="r-name">Your name</label>
+          <input type="text" id="r-name" data-r-name placeholder="At least 3 characters">
+          <p class="err" data-r-error="name"></p></div>
+        <div><label class="flabel" for="r-tour">Tour</label>
+          <select id="r-tour" data-r-tour></select></div>
+        <div><label class="flabel" for="r-rating">Rating</label>
+          <select id="r-rating" data-r-rating>
+            <option value="5">5 — Excellent</option><option value="4">4 — Good</option>
+            <option value="3">3 — Mixed</option><option value="2">2 — Poor</option><option value="1">1 — Bad</option>
+          </select></div>
+        <div><label class="flabel" for="r-text">Your review</label>
+          <textarea id="r-text" data-r-text placeholder="At least 10 characters"></textarea>
+          <p class="err" data-r-error="text"></p></div>
+        <p style="margin:0"><button class="btn" type="submit">Save demo review</button></p>
+      </form>
+    </div>
+  </div></section>
+</main>
+<footer class="site"><div class="wrap cols">
+  <div><p style="font-family:var(--serif);font-size:22px;margin:0 0 8px">Dastaan Journeys</p>
+  <p style="margin:0">A fictional tour operator. Demo build for the MTS portfolio (client-facing owner: BalanceBit Solutions).</p></div>
+  <div><p style="font-weight:700;margin:0 0 8px">Explore</p>
+  <p style="margin:0"><a href="tours.html">All tours</a><br><a href="bookings.html">My Bookings</a><br><a href="index.html">Home</a></p></div>
+  <div><p style="font-weight:700;margin:0 0 8px">Demo contact</p>
+  <p style="margin:0">WhatsApp (demo): +92 300 1234567</p></div>
+</div></footer>
+<script src="js/logic.js"></script>
+<script src="js/site.js"></script>
+<script>
+(function () {
+  "use strict";
+  var L = window.TravelLogic, host = document.querySelector("[data-reviews]");
+  function stored() { try { return JSON.parse(localStorage.getItem("tr_reviews") || "[]"); } catch (e) { return []; } }
+  function render() {
+    var base = [];
+    L.TOURS.forEach(function (t) { t.reviews.forEach(function (r) { base.push({ r: r, tour: t.title }); }); });
+    var mine = stored().map(function (r) { return { r: r, tour: (L.getTour(r.tourId) || {}).title || "" }; });
+    host.innerHTML = mine.concat(base).slice(0, 9).map(function (x) { return TR.reviewHTML(x.r, x.tour); }).join("");
+  }
+  var sel = document.querySelector("[data-r-tour]");
+  sel.innerHTML = L.TOURS.map(function (t) { return '<option value="' + t.id + '">' + t.title + '</option>'; }).join("");
+  document.querySelector("[data-review-form]").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.querySelector("[data-r-name]").value.trim(), text = document.querySelector("[data-r-text]").value.trim();
+    var ok = true;
+    var en = document.querySelector('[data-r-error="name"]'), et = document.querySelector('[data-r-error="text"]');
+    en.textContent = name.length < 3 ? "Enter your name (at least 3 characters)." : "";
+    et.textContent = text.length < 10 ? "Write a little more — a review needs at least 10 characters." : "";
+    if (name.length < 3 || text.length < 10) ok = false;
+    if (!ok) return;
+    var all = stored();
+    all.unshift({ name: "Demo review — " + name, rating: parseInt(document.querySelector("[data-r-rating]").value, 10), text: text + " (Demo review — written on this device.)", tourId: sel.value });
+    localStorage.setItem("tr_reviews", JSON.stringify(all));
+    document.querySelector("[data-r-name]").value = ""; document.querySelector("[data-r-text]").value = "";
+    render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>

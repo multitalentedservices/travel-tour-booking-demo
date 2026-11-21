@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dastaan Journeys — Northern Pakistan & Beyond Tours (Demo)</title>
+<meta name="description" content="DEMO portfolio site for a fictional tour operator: Hunza, Skardu, Swat, Neelum and international tours with day-by-day itineraries and a working booking enquiry flow.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar"><strong>DEMO</strong> — Dastaan Journeys is a fictional tour operator built for the MTS / BalanceBit portfolio. All tours, prices, reviews and departures are demo data.</div>
+<header class="site"><div class="wrap site-in">
+  <a class="logo" href="index.html">Dastaan <em>Journeys</em><small>Expeditions at dusk · Demo</small></a>
+  <nav class="main" aria-label="Main">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="tours.html">Tours</a>
+    <a href="about.html">About &amp; Reviews</a>
+    <a href="bookings.html" data-nav-bookings>My Bookings</a>
+  </nav>
+</div></header>
+<main id="main">
+  <section class="hero"><div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow">Fictional tour operator · Est. for this demo</p>
+      <h1>The north, told like a story worth travelling for.</h1>
+      <p class="lede">Small-group journeys through Hunza, Skardu, Swat and Neelum — plus a short shelf of international escapes — each with a day-by-day itinerary, an honest price and seats you can count.</p>
+      <p style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn" href="tours.html">Browse all 10 tours</a>
+        <a class="btn ghost" style="color:var(--gold);border-color:var(--gold)" href="about.html">Why travel with us</a>
+      </p>
+      <div class="hero-stats">
+        <div><strong>10</strong><span>demo tours</span></div>
+        <div><strong>3</strong><span>regions</span></div>
+        <div><strong>2–6</strong><span>days per journey</span></div>
+        <div><strong>PKR 15,900</strong><span>from, per person</span></div>
+      </div>
+    </div>
+    <img class="hero-img" src="assets/hero.jpg" alt="Dusk over the Hunza Valley with Rakaposhi above terraced villages — demo photograph">
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <p class="eyebrow">Signature departures</p>
+    <h2>Three journeys travellers ask for first</h2>
+    <div class="grid" data-featured></div>
+    <p style="margin-top:20px"><a class="btn ghost" href="tours.html">See the full catalogue</a></p>
+  </div></section>
+
+  <section class="band sand"><div class="wrap">
+    <p class="eyebrow">How booking works here</p>
+    <h2>Enquire, confirm, travel — no payment taken in this demo</h2>
+    <div class="grid">
+      <article class="review"><h3>1 · Choose a departure</h3><p>Every tour lists fixed demo departure dates with the exact seats remaining, computed live from bookings made on this device.</p></article>
+      <article class="review"><h3>2 · Send the enquiry</h3><p>Adults, children at the stated 60% child fare, and add-ons are priced line by line before you confirm. Nothing is charged — this is a demo.</p></article>
+      <article class="review"><h3>3 · Keep your reference</h3><p>You get a booking reference (for example TR-DEMO-####) and the booking waits in My Bookings, where cancelling returns the seats to the departure.</p></article>
+    </div>
+    <p class="clock-note" style="margin-top:18px">Demo clock: today in this demo is <span data-clock></span>. Departure dates and seat counts are calculated against that fixed date so the demo behaves identically on every visit.</p>
+  </div></section>
+
+  <section class="band dark"><div class="wrap cols">
+    <div>
+      <p class="eyebrow">Guided by people who drive these roads</p>
+      <h2>Local crews, small groups, honest driving times</h2>
+      <p>Our fictional crews are written the way a real northern operator works: licensed local guides, group sizes capped between 10 and 20, and itineraries that admit a mountain road takes the time it takes.</p>
+      <p><a class="btn" href="about.html">Read our story and demo reviews</a></p>
+    </div>
+    <img src="assets/guide.jpg" alt="Travellers and a guide looking over a northern Pakistan valley at dusk — demo photograph" style="border-radius:14px;width:100%;height:100%;object-fit:cover;min-height:260px">
+  </div></section>
+</main>
+<footer class="site"><div class="wrap cols">
+  <div><p style="font-family:var(--serif);font-size:22px;margin:0 0 8px">Dastaan Journeys</p>
+  <p style="margin:0">A fictional tour operator. Demo build for the MTS portfolio (client-facing owner: BalanceBit Solutions). No real bookings, payments or travellers exist here.</p></div>
+  <div><p style="font-weight:700;margin:0 0 8px">Explore</p>
+  <p style="margin:0"><a href="tours.html">All tours</a><br><a href="bookings.html">My Bookings</a><br><a href="about.html">About &amp; Reviews</a></p></div>
+  <div><p style="font-weight:700;margin:0 0 8px">Demo contact</p>
+  <p style="margin:0">WhatsApp (demo): +92 300 1234567<br>Every tour page carries a WhatsApp enquiry button — clicks are recorded in a local demo log only.</p></div>
+</div></footer>
+<script src="js/logic.js"></script>
+<script src="js/site.js"></script>
+<script>
+  document.querySelector("[data-clock]").textContent = window.TravelLogic.DEMO_TODAY_LABEL;
+  var picks = ["hunza-classic", "skardu-grand", "istanbul-bosphorus"];
+  document.querySelector("[data-featured]").innerHTML = picks.map(function (id) { return TR.cardHTML(TravelLogic.getTour(id)); }).join("");
+</script>
+</body>
+</html>

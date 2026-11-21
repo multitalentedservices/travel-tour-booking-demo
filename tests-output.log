@@ -1,0 +1,155 @@
+PASS | tour count | got 10 want 10
+PASS | region Northern Pakistan | got 6 want 6
+PASS | region Cultural Pakistan | got 1 want 1
+PASS | region International | got 3 want 3
+PASS | band short (1-3d) | got 2 want 2
+PASS | band mid (4-5d) | got 7 want 7
+PASS | band long (6+d) | got 1 want 1
+PASS | search hunza | got 1 want 1
+PASS | search desert | got 1 want 1
+PASS | search valley (titles/destinations) | got 3 want 3
+PASS | combined region+band | got 3 want 3
+PASS | combined empty (Cultural + long) | got 0 want 0
+PASS | no filters = all | got 10 want 10
+PASS | sort price-asc first | got "lahore-heritage" want "lahore-heritage"
+PASS | sort price-asc last | got "istanbul-bosphorus" want "istanbul-bosphorus"
+PASS | sort price-asc monotonic
+PASS | sort days-desc first | got "skardu-grand" want "skardu-grand"
+PASS | sort days-asc first | got 2 want 2
+PASS | itinerary totals hunza-classic | 5 days / 4 nights
+PASS | itinerary days have title+text hunza-classic
+PASS | includes/excludes present hunza-classic
+PASS | reviews fictional+labelled hunza-classic
+PASS | itinerary totals skardu-grand | 6 days / 5 nights
+PASS | itinerary days have title+text skardu-grand
+PASS | includes/excludes present skardu-grand
+PASS | reviews fictional+labelled skardu-grand
+PASS | itinerary totals fairy-meadows | 4 days / 3 nights
+PASS | itinerary days have title+text fairy-meadows
+PASS | includes/excludes present fairy-meadows
+PASS | reviews fictional+labelled fairy-meadows
+PASS | itinerary totals swat-green | 3 days / 2 nights
+PASS | itinerary days have title+text swat-green
+PASS | includes/excludes present swat-green
+PASS | reviews fictional+labelled swat-green
+PASS | itinerary totals neelum-discovery | 4 days / 3 nights
+PASS | itinerary days have title+text neelum-discovery
+PASS | includes/excludes present neelum-discovery
+PASS | reviews fictional+labelled neelum-discovery
+PASS | itinerary totals deosai-expedition | 5 days / 4 nights
+PASS | itinerary days have title+text deosai-expedition
+PASS | includes/excludes present deosai-expedition
+PASS | reviews fictional+labelled deosai-expedition
+PASS | itinerary totals lahore-heritage | 2 days / 1 nights
+PASS | itinerary days have title+text lahore-heritage
+PASS | includes/excludes present lahore-heritage
+PASS | reviews fictional+labelled lahore-heritage
+PASS | itinerary totals istanbul-bosphorus | 5 days / 4 nights
+PASS | itinerary days have title+text istanbul-bosphorus
+PASS | includes/excludes present istanbul-bosphorus
+PASS | reviews fictional+labelled istanbul-bosphorus
+PASS | itinerary totals baku-caspian | 4 days / 3 nights
+PASS | itinerary days have title+text baku-caspian
+PASS | includes/excludes present baku-caspian
+PASS | reviews fictional+labelled baku-caspian
+PASS | itinerary totals dubai-skyline | 4 days / 3 nights
+PASS | itinerary days have title+text dubai-skyline
+PASS | includes/excludes present dubai-skyline
+PASS | reviews fictional+labelled dubai-skyline
+PASS | departures hunza-classic | 2026-12-05:5,2026-12-19:9,2027-01-23:7
+PASS | departures deterministic hunza-classic
+PASS | departures skardu-grand | 2026-12-12:11,2027-01-09:12,2027-02-06:12
+PASS | departures deterministic skardu-grand
+PASS | departures fairy-meadows | 2026-12-19:9,2027-01-23:6,2026-12-05:8
+PASS | departures deterministic fairy-meadows
+PASS | departures swat-green | 2027-01-09:10,2027-02-06:12,2026-12-12:15
+PASS | departures deterministic swat-green
+PASS | departures neelum-discovery | 2027-01-23:8,2026-12-05:6,2026-12-19:10
+PASS | departures deterministic neelum-discovery
+PASS | departures deosai-expedition | 2027-02-06:10,2026-12-12:8,2027-01-09:6
+PASS | departures deterministic deosai-expedition
+PASS | departures lahore-heritage | 2026-12-05:20,2026-12-19:19,2027-01-23:16
+PASS | departures deterministic lahore-heritage
+PASS | departures istanbul-bosphorus | 2026-12-12:9,2027-01-09:4,2027-02-06:12
+PASS | departures deterministic istanbul-bosphorus
+PASS | departures baku-caspian | 2026-12-19:9,2027-01-23:15,2026-12-05:8
+PASS | departures deterministic baku-caspian
+PASS | departures dubai-skyline | 2027-01-09:19,2027-02-06:15,2026-12-12:6
+PASS | departures deterministic dubai-skyline
+PASS | childPrice hunza (48500*.6) | got 29100 want 29100
+PASS | childPrice lahore rounding (9540->9500) | got 9500 want 9500
+PASS | childPrice dubai | got 103200 want 103200
+PASS | quote 1 adult skardu | got 62000 want 62000
+PASS | quote hunza 2a+1c+pickup+insurance | got 140200 want 140200
+PASS | quote hunza lines sum | got 140200 want 140200
+PASS | quote guide flat not per-traveller | got 113000 want 113000
+PASS | quote insurance per traveller | got 91200 want 91200
+PASS | pkr format | got "PKR 140,200" want "PKR 140,200"
+PASS | hunza dep1 seats known | base=5
+PASS | capacity: exactly-at-capacity passes | got "" want ""
+PASS | capacity: capacity+1 rejected naming constraint | Only 5 seats remain on the Sat 5 Dec 2026 departure of Hunza Valley Classic — reduce travellers to 5 or fewer, or choose another departure date.
+PASS | seats decrement by booking | got 2 want 2
+PASS | seats restored after cancel | got 5 want 5
+PASS | valid enquiry -> no errors | got 0 want 0
+PASS | bad name error names constraint
+PASS | bad email error names constraint
+PASS | bad phone error names constraint
+PASS | phone plain 11 digits ok
+PASS | phone with dashes ok
+PASS | phone +92 rejected (rule is 03 form)
+PASS | phone landline rejected
+PASS | phone 10 digits rejected
+PASS | ref format TR-DEMO-#### | TR-DEMO-9118
+PASS | ref deterministic | got "TR-DEMO-9118" want "TR-DEMO-9118"
+PASS | ref changes with traveller count
+PASS | persistence round-trip
+PASS | wa link number+tour
+PASS | wa text mentions demo
+PASS | contrast ink on paper | 14.25:1
+PASS | contrast plum on paper | 9.41:1
+PASS | contrast muted on paper | 7.30:1
+PASS | contrast paper on ink | 14.25:1
+PASS | contrast sand on ink | 12.23:1
+PASS | contrast gold on ink | 8.45:1
+PASS | contrast white on plum (buttons) | 10.68:1
+PASS | contrast ink on sand | 12.23:1
+PASS | contrast plum on sand | 8.08:1
+PASS | contrast error on paper | 5.76:1
+PASS | contrast ink on card | 15.89:1
+PASS | contrast plum on card | 10.50:1
+PASS | contrast focus plum on paper >= 3 | 9.41:1
+PASS | DEMO labelled index.html
+PASS | title+meta index.html
+PASS | local refs exist index.html | assets/favicon.svg,css/style.css,index.html,index.html,tours.html,about.html,bookings.html,tours.html,about.html,assets/hero.jpg,tours.html,about.html,assets/guide.jpg,tours.html,bookings.html,about.html,js/logic.js,js/site.js
+PASS | DEMO labelled tours.html
+PASS | title+meta tours.html
+PASS | local refs exist tours.html | assets/favicon.svg,css/style.css,index.html,index.html,tours.html,about.html,bookings.html,tour.html,index.html,bookings.html,about.html,js/logic.js,js/site.js,js/tours.js
+PASS | DEMO labelled tour.html
+PASS | title+meta tour.html
+PASS | local refs exist tour.html | assets/favicon.svg,css/style.css,index.html,index.html,tours.html,about.html,bookings.html,tours.html,tour.html,tours.html,bookings.html,about.html,js/logic.js,js/site.js,js/tour.js
+PASS | DEMO labelled book.html
+PASS | title+meta book.html
+PASS | local refs exist book.html | assets/favicon.svg,css/style.css,index.html,index.html,tours.html,about.html,bookings.html,tours.html,bookings.html,about.html,js/logic.js,js/site.js,js/book.js
+PASS | DEMO labelled bookings.html
+PASS | title+meta bookings.html
+PASS | local refs exist bookings.html | assets/favicon.svg,css/style.css,index.html,index.html,tours.html,about.html,bookings.html,tours.html,about.html,index.html,js/logic.js,js/site.js,js/bookings.js
+PASS | DEMO labelled about.html
+PASS | title+meta about.html
+PASS | local refs exist about.html | assets/favicon.svg,css/style.css,index.html,index.html,tours.html,about.html,bookings.html,assets/guide.jpg,tours.html,bookings.html,index.html,js/logic.js,js/site.js
+PASS | no lorem ipsum anywhere
+PASS | no live analytics endpoints
+PASS | image exists assets/tour-hunza.jpg
+PASS | image exists assets/tour-skardu.jpg
+PASS | image exists assets/tour-fairy.jpg
+PASS | image exists assets/tour-swat.jpg
+PASS | image exists assets/tour-neelum.jpg
+PASS | image exists assets/tour-deosai.jpg
+PASS | image exists assets/tour-lahore.jpg
+PASS | image exists assets/tour-istanbul.jpg
+PASS | image exists assets/tour-baku.jpg
+PASS | image exists assets/tour-dubai.jpg
+PASS | code < 400 KB | 79420 B
+PASS | each image <= 120 KB | max 117792 B
+PASS | media total <= 1.6 MB | 1336359 B total
+----
+TOTAL: 153 PASS / 0 FAIL

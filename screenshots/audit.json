@@ -1,0 +1,110 @@
+{
+  "index@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "index@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "index@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "tours@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "tours@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "tours@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "tour@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "tour@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "tour@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "book@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "book@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "book@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "bookings@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "bookings@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "bookings@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "about@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "about@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "about@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "brokenImgs": [],
+    "textBad": []
+  }
+}
