@@ -10,7 +10,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55}
 img{max-width:100%;display:block}
-a{color:var(--plum)}
+a{color:var(--plum);text-decoration:none}
 :focus-visible{outline:3px solid var(--plum);outline-offset:2px}
 .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--paper);padding:10px 16px;z-index:50}
 .skip:focus{left:8px;top:8px}
@@ -134,4 +134,29 @@ footer.site .cols{grid-template-columns:1.4fr 1fr 1fr}
   html{scroll-behavior:auto}
   .hero-img{animation:none}
   *{transition:none!important}
+}
+/* === Premium upgrade 2026-11-22 (Travel) === */
+.feeling{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,27px);color:var(--gold);margin:0 0 10px;max-width:22em}
+.chapter{background:var(--ink);color:var(--paper)}
+.chapter .eyebrow{color:var(--gold)}
+.chapter-hint{color:var(--sand);max-width:36em}
+/* Default state (no-JS, reduced motion, pre-init): complete vertical stack, every photo visible */
+.htrack{display:flex;flex-direction:column;gap:22px;padding:10px 20px 6px;max-width:1180px;margin:0 auto}
+.hpanel{background:var(--card);color:var(--ink);border-radius:14px;overflow:hidden}
+.hpanel img{width:100%;height:300px;object-fit:cover}
+.hpanel-copy{padding:20px 22px}
+.hday{font-family:var(--serif);color:var(--plum);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;margin:0 0 6px}
+.hpanel-copy p{color:var(--muted);margin:0}
+.hpanel-end{display:flex;align-items:center;background:var(--sand)}
+/* Premium-on state (JS + motion allowed): pinned horizontal track */
+html.premium-on .htrack-wrap{overflow:hidden}
+html.premium-on .htrack{flex-direction:row;max-width:none;margin:0;padding:6vh 6vw;gap:4vw;width:max-content;align-items:stretch}
+html.premium-on .hpanel{flex:0 0 min(72vw,880px);display:flex;flex-direction:column}
+html.premium-on .hpanel img{height:52vh;flex:none}
+html.premium-on .hpanel-end{flex-basis:min(56vw,620px)}
+@media (max-width:700px){html.premium-on .hpanel{flex-basis:86vw}html.premium-on .hpanel img{height:44vh}}
+@media (prefers-reduced-motion: reduce){
+ .hero-img{animation:none}
+ html.premium-on .htrack{flex-direction:column;width:auto;max-width:1180px;margin:0 auto;padding:10px 20px 6px}
+ html.premium-on .hpanel{flex:none}
 }

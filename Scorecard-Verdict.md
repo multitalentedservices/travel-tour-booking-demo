@@ -63,3 +63,11 @@ Score unchanged: **90/100 — REJECT (evidence bar only)** — served-preview CW
 sign-off still outstanding; defect repairs do not manufacture them.
 Push of the changed text files (css/style.css, js/site.js, Scorecard-Verdict.md,
 tests-output.log) is pending the GitHub connector's approval card — see FIX-REPORT-ROUND2.md.
+
+## Addendum — Premium Upgrade (2026-11-22)
+
+Cinematic peak (§5 #10): Lenis 1.3.27 + GSAP/ScrollTrigger on index.html only — ONE pinned horizontal-scroll chapter walking the Hunza Valley Classic route photo-by-photo (5 panels, one per itinerary day, text taken from the tour's own itinerary), plus a feeling-led hero re-cut (gold serif feeling line ahead of the existing headline/itinerary facts; no tour, price or data changed).
+P-verdicts: P1 PASS (base link rules untouched; designed nav.main a[aria-current="page"] underline verified intact in-browser after upgrade) · P2 PASS (Lenis active, synced via gsap.ticker + ScrollTrigger.update; reduced-motion = Lenis off) · P3 PASS (exactly one pinned/scrubbed scene) · P4 PASS (serif feeling line + existing display hero) · P5 PASS (photo-sequence chapter, no slider) · P6 PASS (existing booking depth unchanged) · P7 PASS · P8 PASS — index gzip JS total 61,239 B (hero ≤90 KB); all other pages plain, max 11,108 B (≤20 KB) · P9 PASS (reduced-motion AND no-JS: chapter is a complete vertical stack, all 5 panels visible — verified) · P10 PASS.
+T-1 family proof: normal-speed scroll probe through the pinned chapter (0.8-viewport steps, 110ms, no decode-wait): 4/4 panel photos seen in view, every one complete, naturalWidth 1200, opacity 1 — zero blank panels. No loading= attribute anywhere (unchanged).
+Battery: tests.js unamended 153/153 PASS before and after. Screenshots re-shot: 18 combos, 0 problems; screenshots/signature-moment.png = mid-horizontal-chapter frame (Day 1 sliding out, Day 2 fully painted — read by eye). Note: full-page phone capture shows the pin-spacer as dark space in the chapter region — a fullPage-capture artefact of pinning; the live pinned experience is proven by the probe + signature frame.
+Re-score: Area 1 13→14, Area 4 9→10. **TOTAL: 92/100 — REJECT (evidence bar only)** — served-preview CWV + AICOS-112 §0 sign-off still outstanding.

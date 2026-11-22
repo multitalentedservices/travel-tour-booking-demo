@@ -6,9 +6,10 @@
 <title>Dastaan Journeys — Northern Pakistan & Beyond Tours (Demo)</title>
 <meta name="description" content="DEMO portfolio site for a fictional tour operator: Hunza, Skardu, Swat, Neelum and international tours with day-by-day itineraries and a working booking enquiry flow.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/vendor/lenis.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,6 +28,7 @@
   <section class="hero"><div class="wrap hero-in">
     <div class="hero-copy">
       <p class="eyebrow">Fictional tour operator · Est. for this demo</p>
+      <p class="feeling">Some journeys you feel before you can name them.</p>
       <h1>The north, told like a story worth travelling for.</h1>
       <p class="lede">Small-group journeys through Hunza, Skardu, Swat and Neelum — plus a short shelf of international escapes — each with a day-by-day itinerary, an honest price and seats you can count.</p>
       <p style="display:flex;gap:12px;flex-wrap:wrap">
@@ -42,6 +44,21 @@
     </div>
     <img class="hero-img" src="assets/hero.jpg" alt="Dusk over the Hunza Valley with Rakaposhi above terraced villages — demo photograph">
   </div></section>
+
+  <section class="band chapter" data-chapter aria-label="Hunza Valley Classic — the signature route, day by day (demo)">
+    <div class="wrap">
+      <p class="eyebrow">The signature route · Hunza Valley Classic (demo)</p>
+      <h2>Five days on the Karakoram Highway</h2>
+      <p class="chapter-hint">Keep scrolling — the route walks itself, photo by photo. Every stop below is a day from this tour's own itinerary.</p>
+    </div>
+    <div class="htrack-wrap"><div class="htrack">
+      <article class="hpanel"><img src="assets/hero.jpg" alt="Dusk over the Hunza Valley with Rakaposhi above terraced villages — demo photograph"><div class="hpanel-copy"><p class="hday">Day 1</p><h3>Islamabad to Chilas</h3><p>Depart Islamabad at dawn and drive the Karakoram Highway, stopping for tea where the Indus bends below Nanga Parbat. Overnight in Chilas.</p></div></article>
+      <article class="hpanel"><img src="assets/tour-hunza.jpg" alt="Hunza Valley terraces and peaks — demo photograph"><div class="hpanel-copy"><p class="hday">Day 2</p><h3>Chilas to Karimabad</h3><p>Continue to Gilgit and up into Hunza. Evening walk through Karimabad bazaar and sunset at the Baltit Fort viewpoint.</p></div></article>
+      <article class="hpanel"><img src="assets/tour-hunza.jpg" alt="Attabad Lake and the Passu Cones — demo photograph" style="object-position:70% 50%"><div class="hpanel-copy"><p class="hday">Day 3</p><h3>Attabad Lake and Passu</h3><p>Boat on the turquoise water of Attabad Lake, cross the Hussaini suspension bridge and photograph the Passu Cones at golden hour.</p></div></article>
+      <article class="hpanel"><img src="assets/guide.jpg" alt="Travellers and a guide looking over a northern Pakistan valley at dusk — demo photograph"><div class="hpanel-copy"><p class="hday">Day 4</p><h3>Khunjerab Pass day trip</h3><p>Drive to the Khunjerab Pass on the Pakistan–China border (4,693 m), the highest paved border crossing in the world, and return to Karimabad.</p></div></article>
+      <article class="hpanel hpanel-end"><div class="hpanel-copy"><p class="hday">Day 5</p><h3>Karimabad to Islamabad</h3><p>Fly Gilgit to Islamabad (weather permitting) or drive the highway back, arriving in the evening.</p><p style="margin-top:14px"><a class="btn" href="tour.html?id=hunza-classic">See the full Hunza itinerary</a></p></div></article>
+    </div></div>
+  </section>
 
   <section class="band"><div class="wrap">
     <p class="eyebrow">Signature departures</p>
@@ -81,6 +98,10 @@
 </div></footer>
 <script src="js/logic.js"></script>
 <script src="js/site.js"></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/premium.js" defer></script>
 <script>
   document.querySelector("[data-clock]").textContent = window.TravelLogic.DEMO_TODAY_LABEL;
   var picks = ["hunza-classic", "skardu-grand", "istanbul-bosphorus"];
