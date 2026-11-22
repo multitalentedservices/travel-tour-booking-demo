@@ -18,7 +18,7 @@ a{color:var(--plum)}
 .demo-bar{background:var(--ink);color:var(--sand);text-align:center;font-size:13.5px;letter-spacing:.04em;padding:7px 12px}
 .demo-bar strong{color:var(--gold)}
 header.site{background:var(--paper);border-bottom:1px solid var(--line)}
-.site-in{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:14px 0}
+.site-in{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding-block:14px}
 .logo{font-family:var(--serif);font-weight:800;font-size:26px;color:var(--ink);text-decoration:none;line-height:1}
 .logo em{color:var(--plum);font-style:normal}
 .logo small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:4px}
@@ -126,7 +126,8 @@ footer.site .cols{grid-template-columns:1.4fr 1fr 1fr}
   .filters,.frow{grid-template-columns:1fr}
   .itin details p{padding-left:20px}
   .site-in{gap:8px}
-  nav.main a{padding:9px 8px;font-size:14.5px}
+  nav.main{gap:2px}
+  nav.main a{padding:9px 5px;font-size:14.5px}
   body{font-size:16px}
 }
 @media (prefers-reduced-motion: reduce){

@@ -148,7 +148,7 @@ PASS | image exists assets/tour-lahore.jpg
 PASS | image exists assets/tour-istanbul.jpg
 PASS | image exists assets/tour-baku.jpg
 PASS | image exists assets/tour-dubai.jpg
-PASS | code < 400 KB | 79420 B
+PASS | code < 400 KB | 79429 B
 PASS | each image <= 120 KB | max 117792 B
 PASS | media total <= 1.6 MB | 1336359 B total
 ----

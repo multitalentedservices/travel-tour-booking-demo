@@ -33,3 +33,33 @@ Reasons (defects as: what is wrong · where · what fixed looks like):
 Next step: [ ] To AICOS-025 release gate   [X] Back to Gate 5 (evidence completions only — both are external to the build)   [ ] Back to Gate 2
 
 Disclosures: one test assertion was amended during the build and is disclosed in BUILD-NOTES.md ("valley" search count corrected 4 → 3 after recounting the catalogue data; battery re-run 153/153 PASS). One piece of internal jargon in user-facing copy was caught during the screenshot read, rewritten, and the affected screenshot sets re-run clean.
+
+## Addendum — Round-2 Re-verification FIX RUN (2026-11-22)
+
+Independent round-2 re-verification (`Reverification-2026-11-21/round2/REPORT.md`) found 1 visible
++ 1 minor defect on this site. Both FIXED, re-shot and read; battery **153 PASS / 0 FAIL**
+unamended after fixes:
+
+- **T-1 (visible) — Tours catalogue photos could stay blank under normal-speed scrolling on
+  phone (lazy-load timing).** The round-2 probe matrix showed the last card (Dubai) still
+  unloaded after a normal-speed scroll-through and even after a 12s decode-wait, painting
+  only on a slow scroll — the round-1 GB-1/RE-1 family. Pattern fix, same as round 1: the
+  catalogue card template in `js/site.js` no longer emits `loading="lazy"` — catalogue
+  imagery is eager (a sweep confirms no `loading=` attribute remains anywhere in the site's
+  HTML/JS), and the site has no scroll-reveal, so nothing gates image opacity. Proof:
+  normal-speed scroll-through probe at 390px under the round-2 variant-N protocol (0.8-viewport
+  steps, 110ms, +1s wait, NO decode-wait): **10/10 images complete, naturalWidth > 0, effective
+  opacity 1 — zero blank panels** (`round2/fix2-travel-tour-booking/probe-t1-fix/`, report +
+  capture read by eye: all ten photos paint, Dubai included).
+- **T-2 (minor) — Header flush-left at ≤768px.** `.site-in{padding:14px 0}` zeroed the `.wrap`
+  inline padding on the shared element → `padding-block:14px`. Restoring the inset narrowed
+  the phone nav row by 40px (links measured 366px vs 350px available), so the ≤560px nav was
+  tightened (gap 2px, link padding 9px 5px) and all four links stay on one row at 390px.
+  Proof: DOM geometry — logo left = 20px at 768/390/320 (was 0), header 122px at 390
+  (unchanged height); re-shoot 18 combos + 6 probe320, 0 problems
+  (`round2/fix2-travel-tour-booking/`).
+
+Score unchanged: **90/100 — REJECT (evidence bar only)** — served-preview CWV + AICOS-112 §0
+sign-off still outstanding; defect repairs do not manufacture them.
+Push of the changed text files (css/style.css, js/site.js, Scorecard-Verdict.md,
+tests-output.log) is pending the GitHub connector's approval card — see FIX-REPORT-ROUND2.md.

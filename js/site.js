@@ -15,7 +15,7 @@
     stars: function (n) { var s = ""; for (var i = 0; i < 5; i++) s += i < n ? "★" : "☆"; return s; },
     cardHTML: function (t) {
       return '<article class="card">' +
-        '<img src="' + t.img + '" alt="Photo of ' + t.destination + ' — demo tour photograph" loading="lazy">' +
+        '<img src="' + t.img + '" alt="Photo of ' + t.destination + ' — demo tour photograph">' +
         '<div class="card-body">' +
         '<div class="meta"><span class="tag">' + t.region + '</span><span class="tag">' + t.style + '</span></div>' +
         '<h3><a href="tour.html?id=' + t.id + '">' + t.title + '</a></h3>' +
